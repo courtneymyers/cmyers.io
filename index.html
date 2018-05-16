@@ -42,6 +42,34 @@
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.0625);
       }
 
+      .cm-flex {
+        display: flex;
+        flex-flow: row wrap;
+      }
+
+      .cm-flex > * {
+        flex: 1;
+      }
+
+      .cm-square {
+        position: relative;
+      }
+
+      .cm-square::before {
+        content: '';
+        display: block;
+        padding-top: 100%;
+      }
+
+      .cm-square > * {
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+
       .cm-site-header,
       .cm-site-main,
       .cm-site-footer {
@@ -56,6 +84,12 @@
         border-top-right-radius: 3px;
       }
 
+      .cm-site-header a {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
       .cm-logo {
         margin: 0 auto;
         width: 40px;
@@ -68,10 +102,14 @@
       }
 
       /* --- main --- */
+      .cm-site-main li {
+        width: 100%;
+        list-style-type: none;
+      }
 
       /* --- footer --- */
       .cm-site-footer .cm-card {
-        padding: 0.625rem;
+        padding: 0.4375rem 0.625rem 0.625rem;
         text-align: center;
       }
 
@@ -162,17 +200,19 @@
 
     <main class="cm-site-main" role="main">
       <div class="cm-container">
-        <div class="cm-card">
-          <a href="https://twitter.com/MyersCourtney">Twitter</a>
-        </div>
+        <ul class="cm-flex">
+          <li class="cm-square">
+            <a class="cm-card" href="https://twitter.com/MyersCourtney">Twitter</a>
+          </li>
 
-        <div class="cm-card">
-          <a href="https://github.com/courtneymyers">GitHub</a>
-        </div>
+          <li class="cm-square">
+            <a class="cm-card" href="https://github.com/courtneymyers">GitHub</a>
+          </li>
 
-        <div class="cm-card">
-          <a href="https://codepen.io/myers/">CodePen</a>
-        </div>
+          <li class="cm-square">
+            <a class="cm-card" href="https://codepen.io/myers/">CodePen</a>
+          </li>
+        </ul>
       </div>
     </main>
 
