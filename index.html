@@ -27,10 +27,6 @@
         background-color: #eee;
       }
 
-      a {
-        color: #438bca;
-      }
-
       .cm-container {
         position: relative;
         margin: 0 auto;
@@ -40,29 +36,6 @@
       .cm-card {
         background-color: white;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.0625);
-      }
-
-      .cm-flex {
-        display: flex;
-      }
-
-      .cm-square {
-        position: relative;
-      }
-
-      .cm-square::before {
-        content: '';
-        display: block;
-        padding-top: 100%;
-      }
-
-      .cm-square > * {
-        overflow: hidden;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
       }
 
       .cm-site-header,
@@ -97,14 +70,46 @@
       }
 
       /* --- main --- */
-      .cm-site-main li {
-        margin-right: 0.5rem;
-        width: calc((100% - 1rem) / 3);
+      .cm-links {
+        position: relative;
         list-style-type: none;
       }
 
-      .cm-site-main li:last-child {
-        margin-right: 0;
+      .cm-links::before {
+        content: '';
+        display: block;
+        padding-top: calc(100% / 3);
+      }
+
+      .cm-links .cm-twitter a {
+        clip-path: inset(0 calc(200% / 3) 0 0);
+        background-color: #1da1f2;
+      }
+
+      .cm-links .cm-github a {
+        clip-path: inset(0 calc(100% / 3) 0 calc(100% / 3));
+        background-color: #24292e;
+      }
+
+      .cm-links .cm-codepen a {
+        clip-path: inset(0 0 0 calc(200% / 3));
+        background-color: #878787;
+      }
+
+      .cm-links a {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        color: white;
+        transition: 300ms all ease-in-out;
+      }
+
+      .cm-links a:hover,
+      .cm-links a:focus {
+        z-index: 2;
+        clip-path: inset(0 0 0 0);
       }
 
       /* --- footer --- */
@@ -116,6 +121,7 @@
       .cm-site-footer a {
         font-size: 0.75rem;
         text-decoration: none;
+        color: #438bca;
       }
     </style>
   </head>
@@ -200,17 +206,15 @@
 
     <main class="cm-site-main" role="main">
       <div class="cm-container">
-        <ul class="cm-flex">
-          <li class="cm-square">
-            <a class="cm-card" href="https://twitter.com/MyersCourtney">Twitter</a>
+        <ul class="cm-links">
+          <li class="cm-twitter">
+            <a href="https://twitter.com/MyersCourtney">Twitter</a>
           </li>
-
-          <li class="cm-square">
-            <a class="cm-card" href="https://github.com/courtneymyers">GitHub</a>
+          <li class="cm-github">
+            <a href="https://github.com/courtneymyers">GitHub</a>
           </li>
-
-          <li class="cm-square">
-            <a class="cm-card" href="https://codepen.io/myers/">CodePen</a>
+          <li class="cm-codepen">
+            <a href="https://codepen.io/myers/">CodePen</a>
           </li>
         </ul>
       </div>
