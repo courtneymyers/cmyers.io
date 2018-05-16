@@ -44,11 +44,6 @@
 
       .cm-flex {
         display: flex;
-        flex-flow: row wrap;
-      }
-
-      .cm-flex > * {
-        flex: 1;
       }
 
       .cm-square {
@@ -103,8 +98,13 @@
 
       /* --- main --- */
       .cm-site-main li {
-        width: 100%;
+        margin-right: 0.5rem;
+        width: calc((100% - 1rem) / 3);
         list-style-type: none;
+      }
+
+      .cm-site-main li:last-child {
+        margin-right: 0;
       }
 
       /* --- footer --- */
