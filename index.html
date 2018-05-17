@@ -76,22 +76,22 @@
       }
 
       .cm-links .cm-twitter a {
-        clip-path: inset(0.5rem 75% 0.5rem 0);
+        clip-path: inset(0.5rem calc(75% + 0.25rem) 0.5rem 0);
         background-color: #1da1f2;
       }
 
       .cm-links .cm-github a {
-        clip-path: inset(0.5rem 50% 0.5rem 25%);
+        clip-path: inset(0.5rem calc(50% + 0.25rem) 0.5rem calc(25% + 0.25rem));
         background-color: #24292e;
       }
 
       .cm-links .cm-codepen a {
-        clip-path: inset(0.5rem 25% 0.5rem 50%);
+        clip-path: inset(0.5rem calc(25% + 0.25rem) 0.5rem calc(50% + 0.25rem));
         background-color: #878787;
       }
 
       .cm-links .cm-linkedin a {
-        clip-path: inset(0.5rem 0 0.5rem 75%);
+        clip-path: inset(0.5rem 0 0.5rem calc(75% + 0.25rem));
         background-color: #0077b5;
       }
 
@@ -101,10 +101,13 @@
         top: 0;
         width: 100%;
         height: 100%;
-        color: white;
         transition:
           clip-path 300ms ease-in-out,
           z-index 300ms ease-in-out 300ms;
+        /* --- hide text --- */
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
       }
 
       .cm-links a:hover,
