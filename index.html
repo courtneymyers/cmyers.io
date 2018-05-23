@@ -82,7 +82,6 @@
         width: 100%;
         height: 100%;
         text-decoration: none;
-        color: #333;
         background-color: white;
         transition:
           clip-path 300ms ease-in-out,
@@ -96,20 +95,30 @@
         transition: all 300ms ease-in-out;
       }
 
-      .cm-links span {
+      .cm-links a > span {
         position: absolute;
         top: 50%;
-        display: inline-block;
-        padding: 0.5rem;
         width: calc(25% - 0.25rem);
         text-align: center;
         transform: translateY(-50%);
         transition: opacity 300ms ease-in-out;
       }
 
-      .cm-links a:hover span,
-      .cm-links a:focus span {
+      .cm-links a:hover > span,
+      .cm-links a:focus > span {
         opacity: 0;
+      }
+
+      .cm-links a > span span {
+        padding: 0.5rem;
+        color: white;
+        background-color: #444;
+        clip-path: polygon(
+          0%   0.25rem,
+          100% 0%,
+          100% calc(100% - 0.25rem),
+          0%   100%
+        );
       }
 
       .cm-links svg {
@@ -253,7 +262,7 @@
         <ul class="cm-links">
           <li>
             <a href="https://twitter.com/MyersCourtney">
-              <span>Twitter</span>
+              <span><span>Twitter</span></span>
               <svg width="400" height="400" viewBox="0 0 400 400">
                 <use xlink:href="icons.svg#cm-twitter" />
               </svg>
@@ -261,7 +270,7 @@
           </li>
           <li>
             <a href="https://github.com/courtneymyers">
-              <span>GitHub</span>
+              <span><span>GitHub</span></span>
               <svg width="400" height="400" viewBox="0 0 400 400">
                 <use xlink:href="icons.svg#cm-github" />
               </svg>
@@ -269,7 +278,7 @@
           </li>
           <li>
             <a href="https://codepen.io/myers/">
-              <span>CodePen</span>
+              <span><span>CodePen</span></span>
               <svg width="400" height="400" viewBox="0 0 400 400">
                 <use xlink:href="icons.svg#cm-codepen" />
               </svg>
@@ -277,7 +286,7 @@
           </li>
           <li>
             <a href="https://www.linkedin.com/in/courtneyaaronmyers/">
-              <span>LinkedIn</span>
+              <span><span>LinkedIn</span></span>
               <svg width="400" height="400" viewBox="0 0 400 400">
                 <use xlink:href="icons.svg#cm-linkedin" />
               </svg>
