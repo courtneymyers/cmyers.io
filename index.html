@@ -19,6 +19,7 @@
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
           Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
         font-size: 16px;
+        font-weight: 100;
         line-height: 1;
       }
 
@@ -30,7 +31,7 @@
       .cm-container {
         position: relative;
         margin: 0 auto;
-        max-width: 60rem;
+        max-width: 80rem;
       }
 
       .cm-card {
@@ -72,7 +73,7 @@
       .cm-links::before {
         content: '';
         display: block;
-        padding-top: 25%;
+        padding-top: 100%;
       }
 
       .cm-links a {
@@ -95,10 +96,9 @@
         transition: all 300ms ease-in-out;
       }
 
-      .cm-links a > span {
+      .cm-links .cm-link-text {
         position: absolute;
-        top: 50%;
-        width: calc(25% - 0.25rem);
+        width: calc(50% - 0.25rem);
         text-align: center;
         transform: translateY(-50%);
         transition: opacity 300ms ease-in-out;
@@ -109,8 +109,11 @@
         opacity: 0;
       }
 
-      .cm-links a > span span {
+      .cm-links .cm-link-text span {
+        display: inline-block;
         padding: 0.5rem;
+        min-width: 5rem;
+        font-size: 0.875rem;
         color: white;
         background-color: #444;
         clip-path: polygon(
@@ -134,35 +137,59 @@
       }
 
       .cm-links li:nth-of-type(1) a {
-        clip-path: inset(0.5rem calc(75% + 0.25rem) 0.5rem 0);
+        clip-path: inset(
+          0.5rem
+          calc(50% + 0.25rem)
+          calc(50% + 0.25rem)
+          0
+        );
       }
 
       .cm-links li:nth-of-type(2) a {
-        clip-path: inset(0.5rem calc(50% + 0.25rem) 0.5rem calc(25% + 0.25rem));
+        clip-path: inset(
+          0.5rem
+          0
+          calc(50% + 0.25rem)
+          calc(50% + 0.25rem)
+        );
       }
 
       .cm-links li:nth-of-type(3) a {
-        clip-path: inset(0.5rem calc(25% + 0.25rem) 0.5rem calc(50% + 0.25rem));
+        clip-path: inset(
+          calc(50% + 0.25rem)
+          calc(50% + 0.25rem)
+          0.5rem
+          0
+        );
       }
 
       .cm-links li:nth-of-type(4) a {
-        clip-path: inset(0.5rem 0 0.5rem calc(75% + 0.25rem));
+        clip-path: inset(
+          calc(50% + 0.25rem)
+          0
+          0.5rem
+          calc(50% + 0.25rem)
+        );
       }
 
-      .cm-links li:nth-of-type(1) span {
+      .cm-links li:nth-of-type(1) .cm-link-text {
+        top: 25%;
         left: 0;
       }
 
-      .cm-links li:nth-of-type(2) span {
-        left: 25%;
-      }
-
-      .cm-links li:nth-of-type(3) span {
+      .cm-links li:nth-of-type(2) .cm-link-text {
+        top: 25%;
         left: 50%;
       }
 
-      .cm-links li:nth-of-type(4) span {
-        left: 75%;
+      .cm-links li:nth-of-type(3) .cm-link-text {
+        top: 75%;
+        left: 0;
+      }
+
+      .cm-links li:nth-of-type(4) .cm-link-text {
+        top: 75%;
+        left: 50%;
       }
 
       /* --- footer --- */
@@ -177,6 +204,52 @@
         font-size: 0.75rem;
         text-decoration: none;
         color: #438bca;
+      }
+
+      @media (min-width: 50em) {
+        .cm-links::before {
+          padding-top: 25%;
+        }
+
+        .cm-links .cm-link-text {
+          width: calc(25% - 0.25rem);
+        }
+
+        .cm-links li:nth-of-type(1) a {
+          clip-path: inset(0.5rem calc(75% + 0.25rem) 0.5rem 0);
+        }
+
+        .cm-links li:nth-of-type(2) a {
+          clip-path: inset(0.5rem calc(50% + 0.25rem) 0.5rem calc(25% + 0.25rem));
+        }
+
+        .cm-links li:nth-of-type(3) a {
+          clip-path: inset(0.5rem calc(25% + 0.25rem) 0.5rem calc(50% + 0.25rem));
+        }
+
+        .cm-links li:nth-of-type(4) a {
+          clip-path: inset(0.5rem 0 0.5rem calc(75% + 0.25rem));
+        }
+
+        .cm-links li:nth-of-type(1) .cm-link-text {
+          top: 50%;
+          left: 0;
+        }
+
+        .cm-links li:nth-of-type(2) .cm-link-text {
+          top: 50%;
+          left: 25%;
+        }
+
+        .cm-links li:nth-of-type(3) .cm-link-text {
+          top: 50%;
+          left: 50%;
+        }
+
+        .cm-links li:nth-of-type(4) .cm-link-text {
+          top: 50%;
+          left: 75%;
+        }
       }
     </style>
   </head>
@@ -262,7 +335,9 @@
         <ul class="cm-links">
           <li>
             <a href="https://github.com/courtneymyers">
-              <span><span>GitHub</span></span>
+              <span class="cm-link-text">
+                <span>GitHub</span>
+              </span>
               <svg width="400" height="400" viewBox="0 0 400 400">
                 <use xlink:href="icons.svg#cm-github" />
               </svg>
@@ -270,7 +345,9 @@
           </li>
           <li>
             <a href="https://twitter.com/MyersCourtney">
-              <span><span>Twitter</span></span>
+              <span class="cm-link-text">
+                <span>Twitter</span>
+              </span>
               <svg width="400" height="400" viewBox="0 0 400 400">
                 <use xlink:href="icons.svg#cm-twitter" />
               </svg>
@@ -278,7 +355,9 @@
           </li>
           <li>
             <a href="https://codepen.io/myers/">
-              <span><span>CodePen</span></span>
+              <span class="cm-link-text">
+                <span>CodePen</span>
+              </span>
               <svg width="400" height="400" viewBox="0 0 400 400">
                 <use xlink:href="icons.svg#cm-codepen" />
               </svg>
@@ -286,7 +365,9 @@
           </li>
           <li>
             <a href="https://www.linkedin.com/in/courtneyaaronmyers/">
-              <span><span>LinkedIn</span></span>
+              <span class="cm-link-text">
+                <span>LinkedIn</span>
+              </span>
               <svg width="400" height="400" viewBox="0 0 400 400">
                 <use xlink:href="icons.svg#cm-linkedin" />
               </svg>
