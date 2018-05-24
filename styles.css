@@ -18,6 +18,8 @@ html {
 
 body {
   margin: 0.5rem;
+  max-height: 100vh;
+  overflow: hidden;
   background-color: #eee;
 }
 
@@ -60,6 +62,7 @@ body {
 /* --- main --- */
 .cm-links {
   position: relative;
+  max-height: calc(100vh - 6.625rem); /* account for header and footer height */
   list-style-type: none;
 }
 
