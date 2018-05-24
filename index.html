@@ -70,12 +70,14 @@
         list-style-type: none;
       }
 
+      /* 1:1 ratio for medium screens */
       .cm-links::before {
         content: '';
         display: block;
         padding-top: 100%;
       }
 
+      /* stack links on top of each other */
       .cm-links a {
         position: absolute;
         z-index: 1;
@@ -89,6 +91,7 @@
           z-index 300ms ease-in-out 300ms;
       }
 
+      /* visually expand hover/focused link */
       .cm-links a:hover,
       .cm-links a:focus {
         z-index: 2;
@@ -96,6 +99,7 @@
         transition: all 300ms ease-in-out;
       }
 
+      /* vertically and horizontally center link text */
       .cm-links .cm-link-text {
         position: absolute;
         width: calc(50% - 0.25rem);
@@ -104,11 +108,13 @@
         transition: opacity 300ms ease-in-out;
       }
 
-      .cm-links a:hover > span,
-      .cm-links a:focus > span {
+      /* hide link text when hover/focused */
+      .cm-links a:hover .cm-link-text,
+      .cm-links a:focus .cm-link-text {
         opacity: 0;
       }
 
+      /* trapezoid background behind link text */
       .cm-links .cm-link-text span {
         display: inline-block;
         padding: 0.5rem;
@@ -124,6 +130,7 @@
         );
       }
 
+      /* link icons initially hidden */
       .cm-links svg {
         width: 100%;
         height: 100%;
@@ -131,45 +138,27 @@
         transition: opacity 300ms ease-in-out;
       }
 
+      /* link icons displayed when hover/focused */
       .cm-links a:hover svg,
       .cm-links a:focus svg {
         opacity: 1;
       }
 
+      /* position link 'box' cropping and link text */
       .cm-links li:nth-of-type(1) a {
-        clip-path: inset(
-          0.5rem
-          calc(50% + 0.25rem)
-          calc(50% + 0.25rem)
-          0
-        );
+        clip-path: inset(0.5rem calc(50% + 0.25rem) calc(50% + 0.25rem) 0);
       }
 
       .cm-links li:nth-of-type(2) a {
-        clip-path: inset(
-          0.5rem
-          0
-          calc(50% + 0.25rem)
-          calc(50% + 0.25rem)
-        );
+        clip-path: inset(0.5rem 0 calc(50% + 0.25rem) calc(50% + 0.25rem));
       }
 
       .cm-links li:nth-of-type(3) a {
-        clip-path: inset(
-          calc(50% + 0.25rem)
-          calc(50% + 0.25rem)
-          0.5rem
-          0
-        );
+        clip-path: inset(calc(50% + 0.25rem) calc(50% + 0.25rem) 0.5rem 0);
       }
 
       .cm-links li:nth-of-type(4) a {
-        clip-path: inset(
-          calc(50% + 0.25rem)
-          0
-          0.5rem
-          calc(50% + 0.25rem)
-        );
+        clip-path: inset(calc(50% + 0.25rem) 0 0.5rem calc(50% + 0.25rem));
       }
 
       .cm-links li:nth-of-type(1) .cm-link-text {
@@ -206,7 +195,8 @@
         color: #438bca;
       }
 
-      @media (min-width: 50em) {
+      @media (min-width: 40em) {
+        /* 4:1 ratio for largest screens */
         .cm-links::before {
           padding-top: 25%;
         }
@@ -215,6 +205,7 @@
           width: calc(25% - 0.25rem);
         }
 
+        /* position link 'box' cropping and link text */
         .cm-links li:nth-of-type(1) a {
           clip-path: inset(0.5rem calc(75% + 0.25rem) 0.5rem 0);
         }
