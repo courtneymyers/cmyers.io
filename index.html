@@ -70,11 +70,11 @@
         list-style-type: none;
       }
 
-      /* 1:1 ratio for medium screens */
+      /* 1:4 ratio */
       .cm-links::before {
         content: '';
         display: block;
-        padding-top: 100%;
+        padding-top: 400%;
       }
 
       /* stack links on top of each other */
@@ -102,7 +102,7 @@
       /* vertically and horizontally center link text */
       .cm-links .cm-link-text {
         position: absolute;
-        width: calc(50% - 0.25rem);
+        width: 100%;
         text-align: center;
         transform: translateY(-50%);
         transition: opacity 300ms ease-in-out;
@@ -146,39 +146,39 @@
 
       /* position link 'box' cropping and link text */
       .cm-links li:nth-of-type(1) a {
-        clip-path: inset(0.5rem calc(50% + 0.25rem) calc(50% + 0.25rem) 0);
+        clip-path: inset(0.5rem 0 calc(75% + 0.25rem) 0);
       }
 
       .cm-links li:nth-of-type(2) a {
-        clip-path: inset(0.5rem 0 calc(50% + 0.25rem) calc(50% + 0.25rem));
+        clip-path: inset(calc(25% + 0.25rem) 0 calc(50% + 0.25rem) 0);
       }
 
       .cm-links li:nth-of-type(3) a {
-        clip-path: inset(calc(50% + 0.25rem) calc(50% + 0.25rem) 0.5rem 0);
+        clip-path: inset(calc(50% + 0.25rem) 0 calc(25% + 0.25rem) 0);
       }
 
       .cm-links li:nth-of-type(4) a {
-        clip-path: inset(calc(50% + 0.25rem) 0 0.5rem calc(50% + 0.25rem));
+        clip-path: inset(calc(75% + 0.25rem) 0 0.5rem 0);
       }
 
       .cm-links li:nth-of-type(1) .cm-link-text {
-        top: 25%;
+        top: 12.5%;
         left: 0;
       }
 
       .cm-links li:nth-of-type(2) .cm-link-text {
-        top: 25%;
-        left: 50%;
+        top: 37.5%;
+        left: 0;
       }
 
       .cm-links li:nth-of-type(3) .cm-link-text {
-        top: 75%;
+        top: 62.5%;
         left: 0;
       }
 
       .cm-links li:nth-of-type(4) .cm-link-text {
-        top: 75%;
-        left: 50%;
+        top: 87.5%;
+        left: 0;
       }
 
       /* --- footer --- */
@@ -195,8 +195,58 @@
         color: #438bca;
       }
 
+      /* --- medium screen widths --- */
+      @media (min-width: 20em) {
+        /* 1:1 ratio */
+        .cm-links::before {
+          padding-top: 100%;
+        }
+
+        .cm-links .cm-link-text {
+          width: calc(50% - 0.25rem);
+        }
+
+        /* position link 'box' cropping and link text */
+        .cm-links li:nth-of-type(1) a {
+          clip-path: inset(0.5rem calc(50% + 0.25rem) calc(50% + 0.25rem) 0);
+        }
+
+        .cm-links li:nth-of-type(2) a {
+          clip-path: inset(0.5rem 0 calc(50% + 0.25rem) calc(50% + 0.25rem));
+        }
+
+        .cm-links li:nth-of-type(3) a {
+          clip-path: inset(calc(50% + 0.25rem) calc(50% + 0.25rem) 0.5rem 0);
+        }
+
+        .cm-links li:nth-of-type(4) a {
+          clip-path: inset(calc(50% + 0.25rem) 0 0.5rem calc(50% + 0.25rem));
+        }
+
+        .cm-links li:nth-of-type(1) .cm-link-text {
+          top: 25%;
+          left: 0;
+        }
+
+        .cm-links li:nth-of-type(2) .cm-link-text {
+          top: 25%;
+          left: 50%;
+        }
+
+        .cm-links li:nth-of-type(3) .cm-link-text {
+          top: 75%;
+          left: 0;
+        }
+
+        .cm-links li:nth-of-type(4) .cm-link-text {
+          top: 75%;
+          left: 50%;
+        }
+      }
+
+      /* --- large screen widths --- */
       @media (min-width: 40em) {
-        /* 4:1 ratio for largest screens */
+        /* 4:1 ratio */
         .cm-links::before {
           padding-top: 25%;
         }
