@@ -1,0 +1,290 @@
+:root {
+  --orange: #d98135;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 1;
+}
+
+body {
+  margin: 0.5rem;
+  max-height: 100vh;
+  overflow: hidden;
+  background-color: #eee;
+}
+
+.cm-container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 80rem;
+}
+
+.cm-card {
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.0625);
+}
+
+/* --- header --- */
+.cm-site-header .cm-card {
+  padding: 0.375rem;
+  border-top: 5px solid var(--orange);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.cm-site-header a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.cm-logo {
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+}
+
+.cm-logo svg {
+  width: 100%;
+  height: auto;
+}
+
+/* --- main --- */
+.cm-links {
+  position: relative;
+  max-height: calc(100vh - 6.625rem); /* account for header and footer height */
+  list-style-type: none;
+}
+
+/* 1:4 ratio */
+.cm-links::before {
+  content: '';
+  display: block;
+  padding-top: 400%;
+}
+
+/* stack links on top of each other */
+.cm-links a {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  background-color: white;
+  transition:
+    clip-path 300ms ease-in-out,
+    z-index 300ms ease-in-out 300ms;
+}
+
+/* visually expand hover/focused link */
+.cm-links a:hover,
+.cm-links a:focus {
+  z-index: 2;
+  clip-path: inset(0 0 0 0) !important;
+  transition: all 300ms ease-in-out;
+}
+
+/* vertically and horizontally center link text */
+.cm-links .cm-link-text {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-50%);
+  transition: opacity 300ms ease-in-out;
+}
+
+/* hide link text when hover/focused */
+.cm-links a:hover .cm-link-text,
+.cm-links a:focus .cm-link-text {
+  opacity: 0;
+}
+
+/* trapezoid background behind link text */
+.cm-links .cm-link-text span {
+  display: inline-block;
+  padding: 0.5rem;
+  min-width: 5rem;
+  font-size: 0.875rem;
+  color: white;
+  background-color: #444;
+  clip-path: polygon(
+    0%   0.25rem,
+    100% 0%,
+    100% calc(100% - 0.25rem),
+    0%   100%
+  );
+}
+
+/* link icons initially hidden */
+.cm-links svg {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+/* link icons displayed when hover/focused */
+.cm-links a:hover svg,
+.cm-links a:focus svg {
+  opacity: 1;
+}
+
+/* position link 'box' cropping and link text */
+.cm-links li:nth-of-type(1) a {
+  clip-path: inset(0.5rem 0 calc(75% + 0.25rem) 0);
+}
+
+.cm-links li:nth-of-type(2) a {
+  clip-path: inset(calc(25% + 0.25rem) 0 calc(50% + 0.25rem) 0);
+}
+
+.cm-links li:nth-of-type(3) a {
+  clip-path: inset(calc(50% + 0.25rem) 0 calc(25% + 0.25rem) 0);
+}
+
+.cm-links li:nth-of-type(4) a {
+  clip-path: inset(calc(75% + 0.25rem) 0 0.5rem 0);
+}
+
+.cm-links li:nth-of-type(1) .cm-link-text {
+  top: 12.5%;
+  left: 0;
+}
+
+.cm-links li:nth-of-type(2) .cm-link-text {
+  top: 37.5%;
+  left: 0;
+}
+
+.cm-links li:nth-of-type(3) .cm-link-text {
+  top: 62.5%;
+  left: 0;
+}
+
+.cm-links li:nth-of-type(4) .cm-link-text {
+  top: 87.5%;
+  left: 0;
+}
+
+/* --- footer --- */
+.cm-site-footer .cm-card {
+  padding: 0.4375rem 0.625rem 0.625rem;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  text-align: center;
+}
+
+.cm-site-footer a {
+  font-size: 0.75rem;
+  text-decoration: none;
+  color: #438bca;
+}
+
+/* --- medium screen widths --- */
+@media (min-width: 20em) {
+  /* 1:1 ratio */
+  .cm-links::before {
+    padding-top: 100%;
+  }
+
+  .cm-links .cm-link-text {
+    width: calc(50% - 0.25rem);
+  }
+
+  /* position link 'box' cropping and link text */
+  .cm-links li:nth-of-type(1) a {
+    clip-path: inset(0.5rem calc(50% + 0.25rem) calc(50% + 0.25rem) 0);
+  }
+
+  .cm-links li:nth-of-type(2) a {
+    clip-path: inset(0.5rem 0 calc(50% + 0.25rem) calc(50% + 0.25rem));
+  }
+
+  .cm-links li:nth-of-type(3) a {
+    clip-path: inset(calc(50% + 0.25rem) calc(50% + 0.25rem) 0.5rem 0);
+  }
+
+  .cm-links li:nth-of-type(4) a {
+    clip-path: inset(calc(50% + 0.25rem) 0 0.5rem calc(50% + 0.25rem));
+  }
+
+  .cm-links li:nth-of-type(1) .cm-link-text {
+    top: 25%;
+    left: 0;
+  }
+
+  .cm-links li:nth-of-type(2) .cm-link-text {
+    top: 25%;
+    left: 50%;
+  }
+
+  .cm-links li:nth-of-type(3) .cm-link-text {
+    top: 75%;
+    left: 0;
+  }
+
+  .cm-links li:nth-of-type(4) .cm-link-text {
+    top: 75%;
+    left: 50%;
+  }
+}
+
+/* --- large screen widths --- */
+@media (min-width: 40em) {
+  /* 4:1 ratio */
+  .cm-links::before {
+    padding-top: 25%;
+  }
+
+  .cm-links .cm-link-text {
+    width: calc(25% - 0.25rem);
+  }
+
+  /* position link 'box' cropping and link text */
+  .cm-links li:nth-of-type(1) a {
+    clip-path: inset(0.5rem calc(75% + 0.25rem) 0.5rem 0);
+  }
+
+  .cm-links li:nth-of-type(2) a {
+    clip-path: inset(0.5rem calc(50% + 0.25rem) 0.5rem calc(25% + 0.25rem));
+  }
+
+  .cm-links li:nth-of-type(3) a {
+    clip-path: inset(0.5rem calc(25% + 0.25rem) 0.5rem calc(50% + 0.25rem));
+  }
+
+  .cm-links li:nth-of-type(4) a {
+    clip-path: inset(0.5rem 0 0.5rem calc(75% + 0.25rem));
+  }
+
+  .cm-links li:nth-of-type(1) .cm-link-text {
+    top: 50%;
+    left: 0;
+  }
+
+  .cm-links li:nth-of-type(2) .cm-link-text {
+    top: 50%;
+    left: 25%;
+  }
+
+  .cm-links li:nth-of-type(3) .cm-link-text {
+    top: 50%;
+    left: 50%;
+  }
+
+  .cm-links li:nth-of-type(4) .cm-link-text {
+    top: 50%;
+    left: 75%;
+  }
+}

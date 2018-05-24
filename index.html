@@ -3,70 +3,157 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content ="width=device-width, initial-scale=1">
-    <title>cmyers.io</title>
-    <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      html {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-        font-size: 16px;
-        line-height: 1;
-      }
-
-      body {
-        background-color: whitesmoke;
-      }
-
-      .cm-container {
-        position: relative;
-        margin: 0 auto;
-        max-width: 60rem;
-      }
-
-      .cm-card {
-        margin: 0.5rem;
-        padding: 2rem;
-        background-color: white;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
-      }
-    </style>
+    <title>Courtney Myers</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="cm-site-header" role="banner">
       <div class="cm-container">
         <div class="cm-card">
-          <p>(header)</p>
+          <div class="cm-logo">
+            <svg width="100px" height="100px" viewBox="0 0 100 100">
+              <path data-id="outline" stroke="#d88f43" fill="#fff"
+                d="M  50,50
+                   m -48,0
+                   a  48,48 0 1,1  96,0
+                   a  48,48 0 1,1 -96,0">
+              </path>
+              <circle cx="50" cy="50" r="48" stroke="none" fill="none">
+                <animateTransform
+                  attributeName="transform"
+                  type="translate"
+                  values="50,50; 0,0"
+                  begin="500ms"
+                  dur="250ms"
+                />
+                <animateTransform
+                  attributeName="transform"
+                  additive="sum"
+                  type="scale"
+                  values="0; 1"
+                  begin="500ms"
+                  dur="250ms"
+                />
+                <animate
+                  attributeName="fill"
+                  fill="freeze"
+                  values="#fff; #d88f43"
+                  begin="500ms"
+                  dur="1ms"
+                />
+              </circle>
+              <path data-id="letter" stroke="#d88f43" fill="#fff"
+                d="M83,67.789 L83,70.332 L68.436,70.332 L68.436,67.789 L71.961,67.037
+                C72.019,64.263 72.019,60.738 72.019,58.195 L72.019,52.647 C72.019,52.323
+                72.008,52.011 71.996,51.71 C71.996,51.63 71.984,51.549 71.984,51.468
+                C71.973,51.167 71.95,50.89 71.904,50.624 C71.892,50.451 71.869,50.289
+                71.834,50.127 C71.834,50.081 71.834,50.046 71.823,50.011 C71.799,49.849
+                71.765,49.688 71.73,49.526 C71.719,49.433 71.696,49.341 71.672,49.248
+                C71.626,49.063 71.58,48.89 71.511,48.728 C71.453,48.566 71.395,48.404
+                71.326,48.254 C71.268,48.104 71.187,47.965 71.118,47.838 C71.048,47.711
+                70.967,47.584 70.875,47.468 C70.285,46.682 69.465,46.289 68.436,46.289
+                C66.471,46.289 62.194,49.526 62.194,51.895 L62.194,58.195 C62.194,60.68
+                62.194,64.263 62.252,67.153 L65.431,67.789 L65.431,70.332 L50.867,70.332
+                L50.867,67.789 L54.369,67.037 C54.427,64.263 54.427,60.738 54.427,58.195
+                L54.427,52.647 C54.427,48.312 53.213,46.289 50.843,46.289 C48.878,46.289
+                44.602,49.526 44.602,51.895 L44.602,58.195 C44.602,60.68 44.602,64.263
+                44.66,67.153 L47.838,67.789 L47.838,70.332 L33.274,70.332 L33.274,67.789
+                L36.8,67.037 C36.811,66.113 36.834,65.095 36.834,64.078 C36.857,62.379
+                36.857,60.634 36.857,59.166 C34.696,60.356 32.095,60.969 29.159,60.969
+                C19.311,60.969 13,54.381 13,43.423 C13,32.396 20.906,25.668 29.922,25.668
+                C36.857,25.668 42.128,29.691 42.614,35.031 C42.197,37.042 40.88,38.013
+                38.938,38.013 C36.511,38.013 34.985,36.557 34.638,33.505 L33.875,29.344
+                C32.904,29.067 31.933,28.928 30.962,28.928 C25.483,28.928 21.114,33.783
+                21.114,42.521 C21.114,51.468 25.553,56.045 31.656,56.045 C33.609,56.045
+                35.343,55.571 36.857,54.635 C38.452,53.479 39.863,51.41 41.076,49.526
+                C42.001,48.092 43.122,46.821 44.347,45.746 C45.538,44.671 46.821,43.793
+                48.104,43.122 L48.116,43.111 C50.034,42.093 51.942,41.55 53.56,41.55
+                C57.571,41.55 60.114,43.111 61.293,46.347 C61.501,46.139 61.72,45.942
+                61.94,45.746 C63.13,44.671 64.413,43.793 65.697,43.122 L65.708,43.111
+                C66.876,42.486 68.043,42.047 69.13,41.805 C69.569,41.7 70.008,41.619
+                70.412,41.585 C70.563,41.573 70.713,41.562 70.875,41.562 C70.967,41.55
+                71.06,41.55 71.152,41.55 L71.279,41.55 C74.643,41.585 76.955,42.729
+                78.284,45.041 C78.388,45.203 78.469,45.376 78.55,45.549 C78.665,45.781
+                78.769,46.035 78.862,46.289 C79.382,47.746 79.648,49.549 79.648,51.722
+                L79.648,58.195 C79.648,60.738 79.648,64.263 79.706,67.095 L83,67.789">
+              </path>
+            </svg>
+          </div>
         </div>
       </div>
     </header>
 
     <main class="cm-site-main" role="main">
       <div class="cm-container">
-        <div class="cm-card">
-          <p>Twitter</p>
-        </div>
-
-        <div class="cm-card">
-          <p>GitHub</p>
-        </div>
-
-        <div class="cm-card">
-          <p>CodePen</p>
-        </div>
+        <ul class="cm-links">
+          <li>
+            <a href="https://github.com/courtneymyers">
+              <span class="cm-link-text">
+                <span>GitHub</span>
+              </span>
+              <svg width="400" height="400" viewBox="0 0 400 400">
+                <use xlink:href="icons.svg#cm-github" />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/MyersCourtney">
+              <span class="cm-link-text">
+                <span>Twitter</span>
+              </span>
+              <svg width="400" height="400" viewBox="0 0 400 400">
+                <use xlink:href="icons.svg#cm-twitter" />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://codepen.io/myers/">
+              <span class="cm-link-text">
+                <span>CodePen</span>
+              </span>
+              <svg width="400" height="400" viewBox="0 0 400 400">
+                <use xlink:href="icons.svg#cm-codepen" />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/courtneyaaronmyers/">
+              <span class="cm-link-text">
+                <span>LinkedIn</span>
+              </span>
+              <svg width="400" height="400" viewBox="0 0 400 400">
+                <use xlink:href="icons.svg#cm-linkedin" />
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </main>
 
     <footer class="cm-site-footer" role="contentinfo">
       <div class="cm-container">
         <div class="cm-card">
-          <p>(footer)</p>
+          <p><a href="https://keybase.io/courtneymyers">Keybase</a></p>
         </div>
       </div>
     </footer>
+
+    <script>
+      (function() {
+        // http://jakearchibald.com/2013/animated-line-drawing-svg/
+        const letter  = document.querySelector('[data-id="letter"]');
+        const outline = document.querySelector('[data-id="outline"]');
+        const drawPath = (path, time = 750, delay = 0) => {
+          const length = path.getTotalLength();
+          path.style.strokeDasharray = `${length} ${length}`;
+          path.style.strokeDashoffset = length;
+          path.getBoundingClientRect(); // trigger layout
+          path.style.transition = `all ${time}ms ease-in-out ${delay}ms`;
+          path.style.strokeDashoffset = '0'; // begin stroke animation
+        };
+        drawPath(letter);
+        drawPath(outline);
+      })();
+    </script>
   </body>
 </html>
