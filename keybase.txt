@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/courtneymyers
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://cmyers.io
+  * I am courtneymyers (https://keybase.io/courtneymyers) on keybase.
+  * I have a public key with fingerprint B3B1 C8A9 DDE6 F355 A64F  C0BF 8CA0 7DC4 74E4 B5C1
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101c90e568c2d7f83d2583f862ee976e5f4540fc16d628a70545a1f304b0a4f72d10a",
+      "fingerprint": "b3b1c8a9dde6f355a64fc0bf8ca07dc474e4b5c1",
+      "host": "keybase.io",
+      "key_id": "8ca07dc474e4b5c1",
+      "kid": "0101c90e568c2d7f83d2583f862ee976e5f4540fc16d628a70545a1f304b0a4f72d10a",
+      "uid": "98d2768c798c42fc65ad5e4ad4b7bd19",
+      "username": "courtneymyers"
+    },
+    "service": {
+      "hostname": "cmyers.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1527216216,
+  "expire_in": 157680000,
+  "prev": "9f072583c24be324e0e6c1c0dccdb014729cc533fb06b04ea1bfde2eba13ea39",
+  "seqno": 23,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.77
+Comment: https://keybase.io/crypto
+
+yMIlAnicrVJbSBRRGF67WYJ0kS4URQ1pYlucOXPd7UZXgyTIkDSDdc5l1imd2WZm
+V5dFQ6wkWCHKJ0voahRUD4mp1JIhUUpmmRBRRFQPFQVFRRZYZ7Z867HDgcP5/+/7
+zvf9nL7sib6sjPZDwqzLtR0fMwZ6W6O+8sza0gSHLBLnggluH00ftIpQxw3tMwgX
+5AAPeBwAVJJVDImiqwKBkiroqgwpDSgylXRREoGOeZnIUNUUIImSxusCEBHQRF2B
+hAca5+d0wwxTO2IbpstkkYB4rGoBQqisC5KkyaKOAdJVrAGFYFERqYgkzDNipeV4
+DGYOaQ5daVisxi6htL1/4P+z72haLqASqDApJaBiEepYljQiUVEjIlIQ4QMe0KG2
+qVVThsZW1HZNGq+OU9vh6vwca8UMTL3penHGYen+n0QR23ItbFWxcqXrRpygR3Pj
+EQ9XQ1Hor0IIGSZhk2SMGOMalskFeYbEruFJ8hJUIC+z7edobcSwacjwEBLzDtjy
+3qExL48OFG8eGIqIClCkgMqYx4BgTBDgRQUGMJYEQUdARkCkGo90QiFFGi9QTfDy
+OnS/aXFBKDCfWphpOkbY1NyoTbm627f2TPJlZPmmTJ7gfTFf1rQZ4x/veHbmr+iJ
+kmWTO9/cKGkECy+2fchbbqw3S7JzIvP6HnbnJmcXr7k0NHVt6Jv06WTL4aHkuquj
+zpPeF/NPrx5e/rO1t/99u7VrR9H1+PpYy685XaVNTflDI8mbcjL/2ZKB5h1gWn1s
+y9ichrKKnv5XxP5eeK/Iv+HogjODDR9gV3X4yYue6tzy6XdGmgsKFi/1Z52/lrfx
+Ode4KnesV0nVp6L3o+2fC2s6K5a1dH/ZvmixVd6yYmL80UA4727Bp1UPrJwDg63b
+IHhdU3a27d3erQM/MoonJTpeqqObehZ+7bzz6Er/hdmbU/lrDv7MTcw81fp49Mjc
+t7a7+1jqaddwV1VsnrQzCSvP/QZr00MK
+=/WzC
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/courtneymyers
+
+==================================================================
