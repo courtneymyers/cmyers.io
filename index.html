@@ -6,6 +6,9 @@
     <meta name="theme-color" content="#d88f43">
     <meta name="application-name" content="cmyers.io"/>
     <meta name="msapplication-config" content="/meta/browserconfig.xml">
+    <meta name="description" content="Courtney Myers, user interface designer
+    and web application developer specializing in developing user-friendly
+    systems for content creators and end users."/>
     <title>Courtney Myers</title>
     <link rel="shortcut icon" href="/meta/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/meta/favicon-16.png">
@@ -162,6 +165,16 @@
         };
         drawPath(letter);
         drawPath(outline);
+      })();
+
+      (function() {
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/sw.js')
+            // .then(reg => console.log('Service worker registration succeeded:', reg))
+            .catch(err => console.log('Service worker registration failed:', err))
+        } else {
+          console.log('Service workers are not supported in this browser.');
+        }
       })();
     </script>
   </body>
