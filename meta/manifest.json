@@ -1,0 +1,19 @@
+{
+  "short_name": "cmyers.io",
+  "name": "cmyers.io",
+  "icons": [
+    {
+      "src": "/meta/site-icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/meta/site-icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "display": "standalone",
+  "background_color": "#d88f43",
+  "theme_color": "#d88f43"
+}
