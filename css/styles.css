@@ -203,7 +203,37 @@ body {
   color: #438bca;
 }
 
-/* --- medium screen widths --- */
+/* --- small screen widths, no hover (mobile/tablet) --- */
+@media (hover: none) {
+  .cm-links a {
+    height: calc(25% - 0.625rem);
+    -webkit-clip-path: inset(0 0 0 0) !important;
+            clip-path: inset(0 0 0 0) !important;
+  }
+
+  /* position link 'box' */
+  .cm-links li:nth-of-type(1) a {
+    top: 0.5rem;
+  }
+
+  .cm-links li:nth-of-type(2) a {
+    top: calc(0.375rem + 25%);
+  }
+
+  .cm-links li:nth-of-type(3) a {
+    top: calc(0.25rem + 50%);
+  }
+
+  .cm-links li:nth-of-type(4) a {
+    top: calc(0.125rem + 75%);
+  }
+
+  .cm-links .cm-link-text {
+    top: 50% !important;
+  }
+}
+
+/* --- medium screen widths, hover (desktop) --- */
 @media (min-width: 20em) {
   /* 1:1 ratio */
   .cm-links::before {
@@ -256,7 +286,40 @@ body {
   }
 }
 
-/* --- large screen widths --- */
+/* --- medium screen widths, no hover (mobile/tablet) --- */
+@media (hover: none) and (min-width: 20em)  {
+  .cm-links a {
+    height: calc(50% - 0.75rem);
+    width: calc(50% - 0.25rem);
+  }
+
+  /* position link 'box' */
+  .cm-links li:nth-of-type(1) a {
+    top: 0.5rem;
+    left: 0;
+  }
+
+  .cm-links li:nth-of-type(2) a {
+    top: 0.5rem;
+    left: calc(50% + 0.25rem);
+  }
+
+  .cm-links li:nth-of-type(3) a {
+    top: calc(50% + 0.25rem);
+    left: 0;
+  }
+
+  .cm-links li:nth-of-type(4) a {
+    top: calc(50% + 0.25rem);
+    left: calc(50% + 0.25rem);
+  }
+
+  .cm-links .cm-link-text {
+    left: 25% !important;
+  }
+}
+
+/* --- large screen widths, hover (desktop) --- */
 @media (min-width: 40em) {
   /* 4:1 ratio */
   .cm-links::before {
@@ -306,5 +369,31 @@ body {
   .cm-links li:nth-of-type(4) .cm-link-text {
     top: 50%;
     left: 75%;
+  }
+}
+
+/* --- large screen widths, no hover (mobile/tablet) --- */
+@media (hover: none) and (min-width: 40em)  {
+  .cm-links a {
+    top: 0.5rem !important;
+    height: calc(100% - 1rem);
+    width: calc(25% - 0.375rem);
+  }
+
+  /* position link 'box' */
+  .cm-links li:nth-of-type(1) a {
+    left: 0;
+  }
+
+  .cm-links li:nth-of-type(2) a {
+    left: calc(0.125rem + 25%);
+  }
+
+  .cm-links li:nth-of-type(3) a {
+    left: calc(0.25rem + 50%);
+  }
+
+  .cm-links li:nth-of-type(4) a {
+    left: calc(0.375rem + 75%);
   }
 }
