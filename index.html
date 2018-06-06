@@ -159,7 +159,7 @@
     </footer>
 
     <script>
-      mixpanel.track('Page View');
+      mixpanel.track('Page View', { 'User Agent': window.navigator.userAgent });
 
       (function() {
         // http://jakearchibald.com/2013/animated-line-drawing-svg/
